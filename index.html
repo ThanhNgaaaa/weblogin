@@ -23,7 +23,20 @@
         id="txtPassword"
       />
       <br />
-      <button id="btnLogin">Đăng nhập</button>
+      <button id="btnLogin" onclick="login()">Đăng nhập</button>
     </form>
   </body>
 </html>
+<script>
+  function login() {
+    var username = document.getElementById("txtUserName").value;
+    var password = document.getElementById("txtPassword").value;
+
+    if (username === "admin" && password === "admin") {
+      window.location.href = "home.html";
+      alert("Đăng nhập thành công");
+    } else {
+      alert("Tên đăng nhập hoặc mật khẩu không đúng!");
+    }
+  }
+</script>
